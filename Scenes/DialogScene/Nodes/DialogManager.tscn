@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/DialogScene/Nodes/DialogManager.gd" type="Script" id=1]
+
+[node name="DialogManager" type="Control"]
+margin_right = 500.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 500, 200 )
+script = ExtResource( 1 )

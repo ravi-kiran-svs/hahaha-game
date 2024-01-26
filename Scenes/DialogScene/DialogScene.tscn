@@ -1,0 +1,134 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/BaseScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/DialogScene/Nodes/DialogManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/DialogScene/Nodes/DialogBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/DialogScene/DialogScene.gd" type="Script" id=4]
+
+[node name="DialogScene" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="DialogManager" parent="." index="3" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -280.0
+margin_right = 250.0
+margin_bottom = -80.0
+
+[node name="DialogBox0" parent="DialogManager" index="0" instance=ExtResource( 3 )]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -50.0
+margin_right = 300.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox0" index="1"]
+text = "How is your day?"
+
+[node name="DialogBox1" parent="DialogManager" index="1" instance=ExtResource( 3 )]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -50.0
+margin_right = 0.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox1" index="1"]
+text = "Very nice!
+How was your day?"
+
+[node name="DialogBox2" parent="DialogManager" index="2" instance=ExtResource( 3 )]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -50.0
+margin_right = 300.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox2" index="1"]
+text = "I had a great day!
+Missed you so much at the office."
+
+[node name="DialogBox3" parent="DialogManager" index="3" instance=ExtResource( 3 )]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -50.0
+margin_right = 0.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox3" index="1"]
+text = "I missed you too..
+soooo much!
+I'm glad to be home everyday."
+
+[node name="DialogBox4" parent="DialogManager" index="4" instance=ExtResource( 3 )]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -50.0
+margin_right = 300.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox4" index="1"]
+text = "Thank you!
+
+And this is how..."
+
+[node name="DialogBox5" parent="DialogManager" index="5" instance=ExtResource( 3 )]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -50.0
+margin_right = 0.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox5" index="1"]
+text = "...sample dialog goes."
+
+[node name="NextButton" type="Button" parent="." index="4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -5.0
+margin_right = 79.0
+margin_bottom = 75.0
+text = "NEXT"
+
+[node name="PlayButton" type="Button" parent="." index="5"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -5.0
+margin_right = 79.0
+margin_bottom = 75.0
+text = "PLAY"
+
+[connection signal="dialog_finish" from="DialogManager" to="." method="on_dialog_finish"]
+[connection signal="pressed" from="NextButton" to="." method="on_Next_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="on_Play_pressed"]
+
+[editable path="DialogManager/DialogBox0"]
+[editable path="DialogManager/DialogBox1"]
+[editable path="DialogManager/DialogBox2"]
+[editable path="DialogManager/DialogBox3"]
+[editable path="DialogManager/DialogBox4"]
+[editable path="DialogManager/DialogBox5"]
