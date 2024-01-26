@@ -21,8 +21,7 @@ func on_dialog_finish():
 
 
 func on_Play_pressed():
-	pass
-	# go to emoji selection scene
+	get_tree().change_scene("res://Scenes/EmojiSelectionScene/EmojiSelectionScene.tscn")
 
 
 func _input(event):

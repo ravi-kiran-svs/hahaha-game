@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/BaseScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/EmojiSelectionScene/Nodes/EmojiSelector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/EmojiSelectionScene/EmojiSelectionScene.gd" type="Script" id=3]
+
+[node name="EmojiSelectionScene" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="EmojiSelector" parent="." index="3" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -252.0
+margin_right = 250.0
+margin_bottom = 48.0
+
+[connection signal="emoji_picked" from="EmojiSelector" to="." method="on_emoji_picked"]

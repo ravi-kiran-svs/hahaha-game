@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "DialogManager",
 "language": "GDScript",
 "path": "res://Scenes/DialogScene/Nodes/DialogManager.gd"
+}, {
+"base": "Control",
+"class": "EmojiSelector",
+"language": "GDScript",
+"path": "res://Scenes/EmojiSelectionScene/Nodes/EmojiSelector.gd"
 } ]
 _global_script_class_icons={
 "DialogBox": "",
-"DialogManager": ""
+"DialogManager": "",
+"EmojiSelector": ""
 }
 
 [application]
