@@ -23,11 +23,23 @@ _global_script_classes=[ {
 "class": "EmojiSelector",
 "language": "GDScript",
 "path": "res://Scenes/EmojiSelectionScene/Nodes/EmojiSelector.gd"
+}, {
+"base": "Control",
+"class": "JigsawGame",
+"language": "GDScript",
+"path": "res://Scenes/JigsawGameScene/Nodes/JigsawGame.gd"
+}, {
+"base": "Control",
+"class": "JigsawPiece",
+"language": "GDScript",
+"path": "res://Scenes/JigsawGameScene/Nodes/JigsawPiece.gd"
 } ]
 _global_script_class_icons={
 "DialogBox": "",
 "DialogManager": "",
-"EmojiSelector": ""
+"EmojiSelector": "",
+"JigsawGame": "",
+"JigsawPiece": ""
 }
 
 [application]

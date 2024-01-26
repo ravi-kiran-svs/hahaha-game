@@ -1,0 +1,229 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/JigsawGameScene/Nodes/JigsawPiece.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/JigsawGameScene/Nodes/JigsawGame.gd" type="Script" id=2]
+
+[node name="JigsawGame" type="Control"]
+margin_right = 800.0
+margin_bottom = 500.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.3, 0.21, 0.3, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ReferencePosition" type="Position2D" parent="."]
+
+[node name="JigsawPad" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -350.0
+margin_right = 150.0
+margin_bottom = -50.0
+
+[node name="P0" type="Position2D" parent="JigsawPad"]
+position = Vector2( 50, 50 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P0"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P1" type="Position2D" parent="JigsawPad"]
+position = Vector2( 150, 50 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P1"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P2" type="Position2D" parent="JigsawPad"]
+position = Vector2( 250, 50 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P2"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P3" type="Position2D" parent="JigsawPad"]
+position = Vector2( 50, 150 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P3"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P4" type="Position2D" parent="JigsawPad"]
+position = Vector2( 150, 150 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P4"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P5" type="Position2D" parent="JigsawPad"]
+position = Vector2( 250, 150 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P5"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P6" type="Position2D" parent="JigsawPad"]
+position = Vector2( 50, 250 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P6"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P7" type="Position2D" parent="JigsawPad"]
+position = Vector2( 150, 250 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P7"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="P8" type="Position2D" parent="JigsawPad"]
+position = Vector2( 250, 250 )
+__meta__ = {
+"_gizmo_extents_": 30.0
+}
+
+[node name="ColorRect" type="ColorRect" parent="JigsawPad/P8"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="JigsawPieces" type="Control" parent="."]
+
+[node name="JigsawPiece0" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.9, 0.63, 0.63, 1 )
+margin_left = 42.0
+margin_top = 362.0
+margin_right = 142.0
+margin_bottom = 462.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P0")
+
+[node name="JigsawPiece1" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.9, 0.765, 0.63, 1 )
+margin_left = 63.0
+margin_top = 206.0
+margin_right = 163.0
+margin_bottom = 306.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P1")
+
+[node name="JigsawPiece2" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.9, 0.9, 0.63, 1 )
+margin_left = 49.0
+margin_top = 58.0
+margin_right = 149.0
+margin_bottom = 158.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P2")
+
+[node name="JigsawPiece3" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.633487, 0.901961, 0.631373, 1 )
+margin_left = 201.0
+margin_top = 29.0
+margin_right = 301.0
+margin_bottom = 129.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P3")
+
+[node name="JigsawPiece4" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.705882, 0.886275, 0.901961, 1 )
+margin_left = 371.0
+margin_top = 24.0
+margin_right = 471.0
+margin_bottom = 124.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P4")
+
+[node name="JigsawPiece5" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.63, 0.63, 0.9, 1 )
+margin_left = 526.0
+margin_top = 25.0
+margin_right = 626.0
+margin_bottom = 125.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P5")
+
+[node name="JigsawPiece6" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.765, 0.63, 0.9, 1 )
+margin_left = 673.0
+margin_top = 72.0
+margin_right = 773.0
+margin_bottom = 172.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P6")
+
+[node name="JigsawPiece7" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.9, 0.63, 0.9, 1 )
+margin_left = 655.0
+margin_top = 211.0
+margin_right = 755.0
+margin_bottom = 311.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P7")
+
+[node name="JigsawPiece8" parent="JigsawPieces" instance=ExtResource( 1 )]
+modulate = Color( 0.9, 0.63, 0.765, 1 )
+margin_left = 652.0
+margin_top = 355.0
+margin_right = 752.0
+margin_bottom = 455.0
+ref_point = NodePath("../../ReferencePosition")
+pad_point = NodePath("../../JigsawPad/P8")
