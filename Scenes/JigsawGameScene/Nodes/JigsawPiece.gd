@@ -12,7 +12,6 @@ export(NodePath) var pad_point : NodePath = ""
 export(float) var match_margin = 50
 
 
-var is_mouse_in : bool = false
 var diff_pos_mouse : Vector2 = Vector2.ZERO
 var reference : Position2D = null
 var original_pos : Vector2 = Vector2.ZERO
@@ -50,10 +49,9 @@ func _process(delta):
 		set_process(false)
 
 
+var is_mouse_in : bool = false
 func on_mouse_entered():
 	is_mouse_in = true
-
-
 func on_mouse_exited():
 	is_mouse_in = false
 
