@@ -3,12 +3,12 @@
 [ext_resource path="res://Scenes/PictureGameScene/Nodes/GlassPiece.gd" type="Script" id=1]
 
 [node name="GlassPiece" type="Control"]
-modulate = Color( 0, 0, 0, 0.392157 )
+modulate = Color( 0, 0, 0, 0.784314 )
 margin_right = 100.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
-colour_dusky = Color( 0, 0, 0, 0.392157 )
-colour_active = Color( 1, 1, 1, 0.392157 )
+colour_dusky = Color( 0, 0, 0, 0.784314 )
+colour_active = Color( 0, 0, 0, 0.392157 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0

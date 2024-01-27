@@ -21,5 +21,6 @@ margin_left = -250.0
 margin_top = -250.0
 margin_right = 250.0
 margin_bottom = 250.0
+time_between_turns = 1.0
 
 [connection signal="all_glass_pieces_success" from="PictureGame" to="." method="on_puzzle_solved"]
