@@ -1,6 +1,9 @@
 extends Control
 
 
+export(String, FILE, "*.tscn") var next_scene : String = ""
+
+
 onready var dialog_manager : DialogManager = $DialogManager
 onready var next_button : Button = $NextButton
 onready var play_button : Button = $PlayButton
@@ -21,7 +24,7 @@ func on_dialog_finish():
 
 
 func on_Play_pressed():
-	get_tree().change_scene("res://Scenes/EmojiSelectionScene/EmojiSelectionScene.tscn")
+	get_tree().change_scene(next_scene)
 
 
 func _input(event):

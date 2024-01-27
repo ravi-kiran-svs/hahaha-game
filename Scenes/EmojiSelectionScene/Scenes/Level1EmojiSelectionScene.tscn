@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/EmojiSelectionScene/EmojiSelectionScene.tscn" type="PackedScene" id=1]
+
+[node name="Level1EmojiSelectionScene" instance=ExtResource( 1 )]
+next_scene = "res://Scenes/JigsawGameScene/JigsawGameScene.tscn"
+
+[editable path="EmojiSelector"]
