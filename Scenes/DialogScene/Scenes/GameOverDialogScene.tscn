@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/DialogScene/DialogScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/DialogScene/Nodes/DialogBox.tscn" type="PackedScene" id=2]
+
+[node name="GameOverDialogScene" instance=ExtResource( 1 )]
+next_scene = "res://Scenes/MainMenu/MainMenu.tscn"
+
+[node name="DialogBox0" parent="DialogManager" index="0" instance=ExtResource( 2 )]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -50.0
+margin_right = 300.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox0" index="1"]
+text = "GAME OVER"
+
+[node name="DialogBox1" parent="DialogManager" index="1" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -50.0
+margin_right = 0.0
+margin_bottom = 50.0
+
+[node name="Label" parent="DialogManager/DialogBox1" index="1"]
+text = "Thank you for playing"
+
+[node name="PlayButton" parent="." index="5"]
+text = "PLAY AGAIN"
+
+[editable path="DialogManager/DialogBox0"]
+[editable path="DialogManager/DialogBox1"]

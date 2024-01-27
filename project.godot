@@ -38,6 +38,16 @@ _global_script_classes=[ {
 "class": "JigsawPiece",
 "language": "GDScript",
 "path": "res://Scenes/JigsawGameScene/Nodes/JigsawPiece.gd"
+}, {
+"base": "Control",
+"class": "PickerGame",
+"language": "GDScript",
+"path": "res://Scenes/PickerGameScene/Nodes/PickerGame.gd"
+}, {
+"base": "Button",
+"class": "PickerPiece",
+"language": "GDScript",
+"path": "res://Scenes/PickerGameScene/Nodes/PickerPiece.gd"
 } ]
 _global_script_class_icons={
 "DialogBox": "",
@@ -45,7 +55,9 @@ _global_script_class_icons={
 "EmojiSelector": "",
 "GlassPiece": "",
 "JigsawGame": "",
-"JigsawPiece": ""
+"JigsawPiece": "",
+"PickerGame": "",
+"PickerPiece": ""
 }
 
 [application]
