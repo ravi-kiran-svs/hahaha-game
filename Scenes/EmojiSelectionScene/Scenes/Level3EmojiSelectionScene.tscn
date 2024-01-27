@@ -3,6 +3,7 @@
 [ext_resource path="res://Scenes/EmojiSelectionScene/EmojiSelectionScene.tscn" type="PackedScene" id=1]
 
 [node name="Level1EmojiSelectionScene" instance=ExtResource( 1 )]
+next_scene = "res://Scenes/PickerGameScene/PickerGameScene.tscn"
 
 [node name="EmojiButton0" parent="EmojiSelector" index="2"]
 text = "smile"
